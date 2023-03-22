@@ -4,17 +4,16 @@ import { useState } from "react";
 function Cal() {
   const [result, setresult] = useState("");
 
-  const [screenval, setscreenval] = useState("");
-
-  const handleClick = (e) => {
-    setresult(result.concat(e.target.value));
+  const handleClick = (value) => {
+    setresult(result.concat(value));
   };
 
   const calculate = () => {
-    setresult(eval(result));
+    if (eval() === undefined) {
+        alert("Enter a value")
+    }
+    setresult(eval(result).toString());
   };
-
-  console.log(result);
 
   const clear = () => {
     setresult("");
@@ -23,73 +22,73 @@ function Cal() {
   return (
     <div className="main_div">
       <div>
-        <Input placeholder="Basic usage" value={result} />
+        <Input placeholder="00" value={result} />
       </div>
       <div className="btn_div">
         <Button onClick={clear} className="clear">
           Clear
         </Button>
 
-        <Button value="/" onClick={handleClick}>
+        <Button className="operator" onClick={() => handleClick("/")}>
           &divide;
         </Button>
 
-        <Button value="7" onClick={handleClick}>
+        <Button  onClick={() => handleClick("7")}>
           7
         </Button>
 
-        <Button value="8" onClick={handleClick}>
+        <Button  onClick={() => handleClick("8")}>
           8
         </Button>
 
-        <Button value="-" onClick={handleClick}>
+        <Button className="operator" onClick={() => handleClick("-")}>
           &ndash;
         </Button>
 
-        <Button value="9" onClick={handleClick}>
+        <Button  onClick={() => handleClick("9")}>
           9
         </Button>
-        <Button value="4" onClick={handleClick}>
+        <Button  onClick={() => handleClick("4")}>
           4
         </Button>
 
-        <Button value="*" onClick={handleClick}>
+        <Button className="operator" onClick={() => handleClick("*")}>
           &times;
         </Button>
 
-        <Button value="5" onClick={handleClick}>
+        <Button  onClick={() => handleClick("5")}>
           5
         </Button>
 
-        <Button value="6" onClick={handleClick}>
+        <Button  onClick={() => handleClick("6")}>
           6
         </Button>
 
-        <Button value="+" onClick={handleClick}>
+        <Button className="operator" onClick={() => handleClick("+")}>
           +
         </Button>
 
-        <Button value="1" onClick={handleClick}>
+        <Button  onClick={() => handleClick("1")}>
           1
         </Button>
 
-        <Button value="2" onClick={handleClick}>
+        <Button  onClick={() => handleClick("2")}>
           2
         </Button>
 
-        <Button value="." onClick={handleClick}>
+        <Button className="operator" onClick={() => handleClick(".")}>
           .
         </Button>
 
-        <Button value="3" onClick={handleClick}>
+        <Button  onClick={() => handleClick("3")}>
           3
         </Button>
 
-        <Button value="0" onClick={handleClick}>
+        <Button      onClick={() => handleClick("/")}>
           0
         </Button>
 
-        <Button onClick={calculate}>=</Button>
+        <Button className="operator" onClick={calculate}>=</Button>
       </div>
     </div>
   );

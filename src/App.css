@@ -29,10 +29,38 @@
 }
 Button{
   text-align: center;
+  border: none;
+}
+
+
+Button:hover{
+  border: none !important;
+  color: black !important;
+  background-color: rgb(231, 229, 229);
 }
 
 .clear{
   width: 65% !important;
   background-color: rgb(0, 217, 255);
   color: rgb(0, 0, 0);
+  border: none;
+}
+
+.clear:hover{
+  width: 65% !important;
+  background-color: rgb(3, 198, 233) !important;
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+.operator{
+  background-color: rgb(0, 217, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+.operator:hover{
+  background-color: rgb(3, 198, 233) !important;
+  color: rgb(0, 0, 0);
+  border: none;
 }
