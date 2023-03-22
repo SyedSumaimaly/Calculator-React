@@ -1,24 +1,24 @@
 .btn_div {
-  /* background-color: brown; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-
 }
 
 .main_div {
-  background-color: black ;
+  background-color: black;
   width: 20%;
- margin: 0 auto;
- margin-top: 10%;
- padding: 1%;
-  /* display: flex; */
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 1%;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 8px 8px 5px rgba(165, 165, 165, 0.7);
 }
 
+input{
+  text-align: right;
+}
 
 .btn_div > Button {
   margin-top: 3%;
@@ -27,40 +27,71 @@
   padding: 1%;
   text-align: center;
 }
-Button{
+Button {
   text-align: center;
   border: none;
 }
 
-
-Button:hover{
+Button:hover {
   border: none !important;
   color: black !important;
   background-color: rgb(231, 229, 229);
 }
 
-.clear{
+.clear {
   width: 65% !important;
   background-color: rgb(0, 217, 255);
   color: rgb(0, 0, 0);
   border: none;
 }
 
-.clear:hover{
+.clear:hover {
   width: 65% !important;
   background-color: rgb(3, 198, 233) !important;
   color: rgb(0, 0, 0);
   border: none;
 }
 
-.operator{
+.operator {
   background-color: rgb(0, 217, 255);
   color: rgb(0, 0, 0);
   border: none;
 }
 
-.operator:hover{
+.operator:hover {
   background-color: rgb(3, 198, 233) !important;
   color: rgb(0, 0, 0);
   border: none;
+}
+
+@media screen and (max-width: 800px) {
+  .main_div {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .main_div {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .main_div {
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 300px) {
+  .main_div {
+    width: 65%;
+  }
+}
+
+
+@media screen and (max-width: 230px) {
+  .main_div {
+    width: 90%;
+  }
 }
