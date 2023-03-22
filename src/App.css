@@ -1,0 +1,38 @@
+.btn_div {
+  /* background-color: brown; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.main_div {
+  background-color: black ;
+  width: 20%;
+ margin: 0 auto;
+ margin-top: 10%;
+ padding: 1%;
+  /* display: flex; */
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 8px 8px 5px rgba(165, 165, 165, 0.7);
+}
+
+
+.btn_div > Button {
+  margin-top: 3%;
+  margin-left: 2%;
+  width: 31%;
+  padding: 1%;
+  text-align: center;
+}
+Button{
+  text-align: center;
+}
+
+.clear{
+  width: 65% !important;
+  background-color: rgb(0, 217, 255);
+  color: rgb(0, 0, 0);
+}
